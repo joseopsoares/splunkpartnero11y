@@ -141,6 +141,15 @@
             <div class="gap"></div>
             <div class="gap"></div>
         </div>
+        <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
+        <script>
+            SplunkRum.init({
+                beaconUrl: "https://rum-ingest.eu0.signalfx.com/v1/rum",
+                rumAuth: "vjFHErVwHbiPT1DPSoIwmg",
+                app: "SplunkPartnerO11y",
+                environment: "Production"
+                });
+        </script>
 
         <script src="../mixitup.min.js"></script>
         <script src="../mixitup-multifilter.min.js"></script>
