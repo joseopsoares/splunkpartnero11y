@@ -30,7 +30,7 @@ body {
     display: inline-block;
     width: 2.7rem;
     height: 2.7rem;
-    background: #444;
+    background: #6A2C5D;
     cursor: pointer;
     font-size: 0.1px;
     color: white;
@@ -80,7 +80,7 @@ body {
 .checkbox-group {
     display: inline-block;
     padding: .5rem;
-    background: #2a2a2a;
+    background: #6A2C5D;
     margin-left: .75rem;
     vertical-align: top;
 }
@@ -147,10 +147,19 @@ body {
     border-radius: 2px;
     margin-bottom: 1rem;
     position: relative;
+    padding: 0.7%
 }
 
+.item a{
+    color: #6A2C5D;
+}
+
+.item a:hover{
+    color: #1D92C5;
+}
+
+
 .item:before {
-    content: '';
     display: inline-block;
     padding-top: 56.25%;
 }
@@ -169,47 +178,26 @@ body {
 }
 
 .item .title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem;
+    text-align: top;
     font-size: 1rem;
-    color: #333;
-    font-weight:  700;
+    text-align: left;
 }
 
-.item .description {
-    display: inline-block;
-    top:  0;
-    left: 0;
-    padding: 3rem 1rem 1rem 1rem;
+.item .description {   
     font-size: 0.8rem;
     color: #333;
+    padding-top: .5rem;
 
 }
 .item .type {
-    display: inline-block;
-    top:  0;
-    left: 0;
     font-size: 0.8rem;
-    color: #333;
-}
-.item .cost {
-    display: inline-block;
-    top:  0;
-    left: 0;
-    font-size: 0.8rem;
-    color: #333;
+    color: #3863A0;
+    padding-top: .5rem;
+    font-weight: 700;
+    font-style: italic;
 
 }
-.item .duration {
-    display: inline-block;
-    top:  0;
-    left: 0;
-    font-size: 0.8rem;
-    color: #333;
 
-}
 
 
 /* Grid Breakpoints
