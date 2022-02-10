@@ -1,0 +1,42 @@
+[
+    {
+        id: 1,
+        color: 'green',
+        publishedDate: '2015-10-03'
+    },
+    {
+        id: 2,
+        color: 'green',
+        publishedDate: '2015-12-22'
+    },
+    {
+        id: 3,
+        color: 'blue',
+        publishedDate: '2016-02-15'
+    },
+    {
+        id: 4,
+        color: 'pink',
+        publishedDate: '2016-04-25'
+    },
+    {
+        id: 5,
+        color: 'green',
+        publishedDate: '2016-05-02'
+    },
+    {
+        id: 6,
+        color: 'blue',
+        publishedDate: '2016-10-07'
+    },
+    {
+        id: 7,
+        color: 'pink',
+        publishedDate: '2016-11-13'
+    },
+    {
+        id: 8,
+        color: 'blue',
+        publishedDate: '2016-12-01'
+    }
+];

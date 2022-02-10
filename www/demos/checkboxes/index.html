@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -83,64 +84,21 @@
             </fieldset>
 
 
-            <div class="control-group">
-                <button type="button" class="control control-sort" data-sort="default:asc">Asc</button>
-                <button type="button" class="control control-sort" data-sort="default:desc">Desc</button>
-            </div>
+          
         </form>
+        <div class="controls" data-ref="controls">
+         
 
-        <div class="container">
-            <div class="mix jounrey_baseline product_apm">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Extending Monitoring With Observability</div>
-                <div class="desc">In today's world of cloud-native applications with microservices, ephemeral execution and elastic behavior, we need observability. We already monitor our systems, and observability starts with monitoring. </div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            <div class="mix jounrey_appmodernization">
-                <div class="title">Getting Started With Splunk Observability</div>
-                <div class="desc">Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.</div>
-            </div>
-            
+            <button type="button" class="control control-sort" data-ref="sort" data-key="publishedDate" data-order="asc">Asc</button>
+            <button type="button" class="control control-sort" data-ref="sort" data-key="publishedDate" data-order="desc">Desc</button>
+        </div>
 
-            <div class="gap"></div>
-            <div class="gap"></div>
+        <div class="container" data-ref="container">
+            <div class="gap" data-ref="first-gap"></div>
             <div class="gap"></div>
             <div class="gap"></div>
         </div>
+   
         <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
         <script>
             SplunkRum.init({
@@ -150,21 +108,172 @@
                 environment: "Production"
                 });
         </script>
-
+        <script src="../mock-api.js"></script>
         <script src="../mixitup.min.js"></script>
         <script src="../mixitup-multifilter.min.js"></script>
 
         <script>
-            var containerEl = document.querySelector('.container');
+            // Typically, our data would live in a DB and be retrieved via a JSON API, but in
+            // this demo we will create a mock dataset using an array literal:
 
-            var mixer = mixitup(containerEl, {
+            var items = [
+                {
+                    id: 1,
+                    title: 'Getting Started With Splunk Observability',
+                    description: 'Observability has three pillars (Traces, Metrics, Logs), many moving parts and can be overwhelming to get started. We will walk you through the Splunk Observability Application Performance Monitoring (APM) initial steps, starting from downloading a sample application from git all the way to seeing the telemetry reported on the Splunk Observability Cloud platform.',
+                    duration: '30',
+                    cost: '0',
+                    type: '.Conf Session',
+                    product: 'Splunk APM, Splunk Log Observer',
+                    level: '101',
+                    migrationphase: 'All / NA / Overview learning',
+                    partnerpersona: ' ',
+                    partnertype: '',
+                    link: 'https://conf.splunk.com/watch/conf-online.html?search=DVO1111C'
+                },
+                {
+                    id: 2,
+                    color: 'green',
+                    publishedDate: '2015-12-22'
+                },
+                {
+                    id: 3,
+                    color: 'blue',
+                    publishedDate: '2016-02-15'
+                },
+                {
+                    id: 4,
+                    color: 'pink',
+                    publishedDate: '2016-04-25'
+                },
+                {
+                    id: 5,
+                    color: 'green',
+                    publishedDate: '2016-05-02'
+                },
+                {
+                    id: 6,
+                    color: 'blue',
+                    publishedDate: '2016-10-07'
+                },
+                {
+                    id: 7,
+                    color: 'pink',
+                    publishedDate: '2016-11-13'
+                },
+                {
+                    id: 8,
+                    color: 'jounrey_appmodernization',
+                    publishedDate: '2016-12-01'
+                }
+            ];
+
+            // The `Api` class is not part of MixItUp and has been created to mock
+            // the asyncronous fetching of data for this demo. To use it, we must
+            // create an api instance, passing in our mock data to represent the
+            // contents of a DB.
+
+            var api = new Api(items);
+
+            var filters   = document.querySelectorAll('[data-ref="filter"]');
+            var container = document.querySelector('[data-ref="container"]');
+
+            // "Gap" elements are used to maintain even columns in a justified grid. See our
+            // "MixItUp Grid Layouts" tutorial for more information.
+
+            var firstGap = document.querySelector('[data-ref="first-gap"]');
+
+            // We'll need to keep track of our active current filter so
+            // that we can sort within the current filter.
+
+            var activeColor = '';
+
+            // Instantiate and configure the mixer
+
+            var mixer = mixitup(container, {
                 multifilter: {
                     enable: true
                 },
-                animation: {
-                    effects: 'fade translateZ(-100px)'
+                selectors: {
+                    target: '[data-ref="item"]' // Query targets with an attribute selector to keep our JS and styling classes seperate
+                },
+                layout: {
+                    siblingAfter: firstGap // Ensure the first "gap" element is known to mixitup incase of insertion into an empty container
+                },
+                data: {
+                    uidKey: 'id' // Our data model must have a unique id. In this case, its key is 'id'
+                },
+                render: { // We must provide a target render function incase we need to render new items not in the initial dataset (not used in this demo)
+                    target: function(item) {
+                        return '<div class="item ' + item.product + '" data-ref="item"><div class="title"><a href="' + item.link + '">' + item.title + '</a></div><div class="description">' + item.description + '</div><div class="type">' + item.type + '</div><div class="duration">' + item.duration + '</div><div class="cost">' + item.cost + '</div></div>';
+                    }
                 }
             });
+
+            /**
+             * A helper function to set an active styling class on an active button,
+             * and remove it from its siblings at the same time.
+             *
+             * @param {HTMLElement} activeButton
+             * @param {HTMLELement[]} siblings
+             * @return {void}
+             */
+
+            function activateButton(activeButton, siblings) {
+                var button;
+                var i;
+
+                for (i = 0; i < siblings.length; i++) {
+                    button = siblings[i];
+
+                    button.classList[button === activeButton ? 'add' : 'remove']('control-active');
+                }
+            }
+
+            /**
+             * A click handler to detect the type of button clicked, read off the
+             * relevent attributes, call the API, and trigger a dataset operation.
+             *
+             * @param   {HTMLElement} button
+             * @return  {void}
+             */
+
+            function handleButtonClick(button) {
+                // Define default values for color, sortBy and order
+                // incase they are not present in the clicked button
+
+                var color  = activeColor;
+                var sortBy = 'id';
+                var order  = 'asc';
+
+             
+                api.get({
+                    color: color,
+                    $sort_by: sortBy,
+                    $order: order
+                })
+                    .then(function(items) {
+                        // Our api returns an array of items which we can send
+                        // straight to our mixer using the .dataset() method
+
+                        return mixer.dataset(items);
+                    })
+                    .then(function(state) {
+                        console.log('fetched ' + state.activeDataset.length + ' items');
+                    })
+                    .catch(console.error.bind(console));
+            }
+
+    
+
+            mixer.dataset(items)
+                .then(function(state) {
+                    console.log('loaded ' + state.activeDataset.length + ' items');
+                });
+
+            // NB: Always remember to destroy the instance with mixer.destroy() when your
+            // component unmounts to ensure that event handlers are unbound and the
+            // instance can be garbage collected.
         </script>
     </body>
 </html>
