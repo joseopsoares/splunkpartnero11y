@@ -113,6 +113,15 @@ body {
     margin-bottom: .5rem;
 }
 
+.checkbox-group-label-tagline {
+    display: block;
+    margin-bottom: .5rem;
+    color: white;
+    font-family: 'helvetica-neue', arial, sans-serif;
+    font-size: .9rem;
+    font-style: italic;
+}
+
 .checkbox-label {
     margin-right: .5rem;
 }
@@ -198,7 +207,15 @@ body {
 
 }
 
+.owner 
 
+{
+    color: #ffffff;
+    padding-top: .5rem;
+    font-weight: 700;
+    font-style: italic;
+
+}
 
 /* Grid Breakpoints
 ---------------------------------------------------------------------- */
